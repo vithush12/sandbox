@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        h1,
+        h2 {
+            color: #333;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sandbox Application</h1>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Network Configuration Instructions</h2>
+            <p>Configure the network for your sandbox application as described below:</p>
+            <ul>
+                <li>Enable router configuration commands for fastethernet and serial interfaces.</li>
+                <li>Set static IP addresses for all devices.</li>
+                <li>Verify connectivity using ping commands.</li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>IP Address Table</h2>
+            <table>
+                <tr>
+                    <th>Device</th>
+                    <th>Role</th>
+                    <th>IP Address</th>
+                    <th>Subnet Mask</th>
+                </tr>
+                <tr>
+                    <td>Desktop VM</td>
+                    <td>Management</td>
+                    <td>192.168.40.2</td>
+                    <td>255.255.255.0</td>
+                </tr>
+                <tr>
+                    <td>Gateway Router (enp0s3)</td>
+                    <td>Internet Access</td>
+                    <td>10.0.0.16</td>
+                    <td>255.255.255.0</td>
+                </tr>
+                <tr>
+                    <td>Gateway Router (enp0s8)</td>
+                    <td>Subnet 01</td>
+                    <td>192.168.40.1</td>
+                    <td>255.255.255.0</td>
+                </tr>
+                <tr>
+                    <td>Gateway Router (enp0s9)</td>
+                    <td>Subnet 02</td>
+                    <td>192.168.140.1</td>
+                    <td>255.255.255.0</td>
+                </tr>
+                <tr>
+                    <td>Application Server</td>
+                    <td>Server</td>
+                    <td>192.168.140.2</td>
+                    <td>255.255.255.0</td>
+                </tr>
+            </table>
+        </section>
+        <section class="section">
+            <h2>Testing and Verification</h2>
+            <p>Ensure connectivity by performing ping tests between devices:</p>
+            <ul>
+                <li>Ping 192.168.40.1 from Desktop VM.</li>
+                <li>Ping 192.168.140.2 from Ubuntu Server.</li>
+                <li>Ping 192.168.40.2 from Application Server.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
